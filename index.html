@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DropBeam – Share files & text</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="wrap">
+  <header>
+    <div class="logo"><i>⚡</i>DataDrop</div>
+    <button class="theme" id="theme" aria-label="Toggle theme">🌙</button>
+  </header>
+  <h1>Share anything.<br>Instantly.</h1>
+  <p class="sub">Drag and drop files or paste text to share them instantly across your devices.</p>
+  <div class="setup" id="setup">⚠️ Add your <b>firebaseConfig</b> and <b>CLOUDINARY</b> values in <b>app.js</b>, then open this page using a local server (such as Live Server) or a hosted site.</div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>📁 Upload files</h2>
+      <div class="drop" id="drop" tabindex="0">
+        <div class="ic">☁️</div>
+        <b>Drag and drop files here</b>
+        <small>or click to browse</small>
+      </div>
+      <input type="file" id="file" multiple hidden>
+      <div class="bar" id="bar"><b id="barin"></b></div>
+    </div>
+    <div class="card">
+      <h2>✍️ Share text</h2>
+      <textarea id="txt" placeholder="Enter text, a link, or code here..."></textarea>
+      <button class="btn" id="send">Share text</button>
+    </div>
+  </div>
+
+  <div class="list-head">Shared items <small id="count" style="color:var(--muted);font-weight:500"></small></div>
+  <div class="items" id="items"><div class="empty">Loading…</div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
